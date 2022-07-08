@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:ital,wght@0,300;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+}
+
+nav ul li {
+    background: #0a0a38;
+    padding: 1rem;
+    color: white;
+    font-size: 1.4rem;
+    text-align: center;
+    list-style: none;
+}
+
+.gameContainer {
+    display: flex;
+    width: 70%;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 10vw);
+}
+
+.box {
+    border: 1px solid black;
+    width: 10vw;
+    height: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+.box:hover {
+    color: white;
+    background-color: #0a0a38
+}
+
+.turn-reset {
+    display: flex;
+    width: 100%;
+    border: 1px solid black;
+    margin: 2rem 0;
+    padding: 1rem 0;
+    position: relative;
+}
+
+.turn-reset button {
+    position: absolute;
+    right: 0;
+    width: 50%;
+    border-top: none;
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
+    border-right: none;
+    background: transparent;
+    padding: 1.1rem;
+    top: 0;
+    cursor: pointer;
+    background-color: #0a0a38;
+    color: white;
+}
+
+.turn {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.gameInfo {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 7rem;
+}
+
+.imgbox img {
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.bt-0{
+    border-top: 0;
+}
+
+.bl-0{
+    border-left: 0;
+    border-right: 2px solid black;
+}
+
+.br-0{
+    border-right: 0;
+}
+
+.bb-0{
+    border-bottom: 0;
+}
+
+@media screen and (max-width:1040px) {
+    .gameContainer {
+        width: 90% !important;
+    }
+}
+
+@media screen and (max-width:810px) {
+    .gameContainer {
+        flex-direction: column;
+    }
+
+    .gameInfo {
+        margin-top: 2rem;
+    }
+
+    .gameInnerContainer {
+        display: flex;
+        flex-direction: column;
+        width: 90vw;
+    }
+
+    .container {
+        grid-template-columns: repeat(3, 30vw);
+    }
+
+    .box {
+        width: 30vw;
+        height: 30vw;
+    }
+}
